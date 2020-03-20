@@ -51,6 +51,8 @@
 ```
 Estrutura dentro do arquivo *.dev
 
+[Download](https://github.com/keys8410/binary-search-tree-viewer/blob/master/bin_.rar) *.dev
+
 ![Screenshot_543](https://user-images.githubusercontent.com/56321281/77134269-f6410c80-6a44-11ea-9312-98af48fc14fe.png)
 
 <br>
@@ -99,6 +101,5 @@ License
 ----
 APACHE 2.0
 
-> *Software Livre!*
-
+> *Software Livre!* 
 Use-o como base para estudos e afins.
