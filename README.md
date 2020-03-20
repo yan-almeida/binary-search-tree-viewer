@@ -18,15 +18,21 @@
 'BSTV' requer [winRAR](https://www.win-rar.com/start.html?&L=0) para descompactá-lo - ou similar.
 
 ![Screenshot_540](https://user-images.githubusercontent.com/56321281/77133936-b9284a80-6a43-11ea-91b4-e91c511b6ede.png)
+
 > Há uma pasta dentro nomeada como 'files'. **Não a exclua!**
 
 - Arquivo gerado dentro do diretório 'files': *.txt
+
 <br>
+
 > Exemplo de backup < b >
+
 ![Screenshot_544](https://user-images.githubusercontent.com/56321281/77137254-e4169c80-6a4b-11ea-923a-f6d23ee12bcb.png)
 
 ### Execução - *.dev
+
 > Cabeçalhos nativos:
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,7 +41,9 @@
 #include <time.h>
 ```
 <br>
+
 > Cabeçalhos não nativos
+
 ```c
 #include "conio2.h" 
 #include "bst.h" 
@@ -46,9 +54,11 @@ Estrutura dentro do arquivo *.dev
 ![Screenshot_543](https://user-images.githubusercontent.com/56321281/77134269-f6410c80-6a44-11ea-9312-98af48fc14fe.png)
 
 <br>
+
 ### Comandos - *duplo ambiente*
 
 #### Prompt de Comando
+
 > Ambiente de aprendizagem: 
 
 | Commands: | Performs |
@@ -59,7 +69,9 @@ Estrutura dentro do arquivo *.dev
 | /esc | 'this command ends the process.' |
 | /main | 'this command starts program execution - main/bin_tree.' |
 <br>
+
 #### main/bin_tree
+
 > Ambiente de execução:
 
 | Keys: | Performs |
@@ -73,13 +85,16 @@ Estrutura dentro do arquivo *.dev
 | b | 'this key do an backup in external archive' |
 
 <br>
+
 ### Dados
+
     Autor: Yan Almeida Garcia - 2019 199 05
     Departamento de T.I., UniProjeção (Taguatinga, Campus I)
     Sistemas de Informação (3º semestre) - 1º/2020
     Disciplina: Estrutura de Dados - João Evangelista
     
 <br><br>
+
 License
 ----
 APACHE 2.0
