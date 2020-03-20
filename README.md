@@ -17,8 +17,8 @@
 
 'BSTV' requer [winRAR](https://www.win-rar.com/start.html?&L=0) para descompactá-lo - ou similar.
 
-![Screenshot_540](https://user-images.githubusercontent.com/56321281/77133936-b9284a80-6a43-11ea-91b4-e91c511b6ede.png)
-
+![Screenshot_540](https://user-images.githubusercontent.com/56321281/77133936-b9284a80-6a43-11ea-91b4-e91c511b6ede.png)   
+[Download](https://github.com/keys8410/binary-search-tree-viewer/blob/master/Binary%20Search%20Tree%20Viewer.zip)
 > Há uma pasta dentro nomeada como 'files'. **Não a exclua!**
 
 <br>
