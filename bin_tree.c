@@ -4,9 +4,9 @@
 #include <conio.h>
 #include <time.h>
 
-#include "conio2.h" 
-#include "bst.h" 
-#include "cmd.h" 
+#include "headers/conio2.h" 
+#include "headers/bst.h" 
+#include "headers/cmd.h" 
 
 // prot. functions
 void show_tree(); // menu >> insert(+)/remove(-)/exit(1)/show_menu()
@@ -17,28 +17,28 @@ void show_msg(); //
 struct tm* DH;
 
 /*
-	19 de março de 2020	
-    Departamento de T.I., UniProjeção (Taguatinga, Campus I)
+	19 de marÃ§o de 2020	
+    Departamento de T.I., UniProjeÃ§Ã£o (Taguatinga, Campus I)
    
-    Sistemas de Informação (3º semestre)
+    Sistemas de InformaÃ§Ã£o (3Âº semestre)
     Autor: Yan Almeida Garcia - 2019 199 05 
     
-    Disciplina: Estrutura de Dados - João Evangelista
+    Disciplina: Estrutura de Dados - JoÃ£o Evangelista
 
-	00) montagem >> árvore binária de busca:
-		- Inserção.
-		- Remoção.
-		- exibição: 
-			  - árvore completa - raiz, sub-arv. esquerda e sub-arv. direita;
+	00) montagem >> Ã¡rvore binÃ¡ria de busca:
+		- InserÃ§Ã£o.
+		- RemoÃ§Ã£o.
+		- exibiÃ§Ã£o: 
+			  - Ã¡rvore completa - raiz, sub-arv. esquerda e sub-arv. direita;
 			  - em ordem;
-			  - pré-ordem;
-			  - pós-ordem;					
-		- Buscar elemento na árvore - mostragem de tempo de busca
+			  - prÃ©-ordem;
+			  - pÃ³s-ordem;					
+		- Buscar elemento na Ã¡rvore - mostragem de tempo de busca
 		
-	Referência bibliográfica:
-		[01]. "Árvore Binária com a Linguagem C", disponível em: http://ninjacode.com.br/arvore-binaria-com-a-linguagem-c/
-		[02]. "Programar em C/Árvores binárias de Busca", disponível em: https://pt.wikibooks.org/wiki/Programar_em_C/%C3%81rvores_bin%C3%A1rias_de_Busca
-		[03]. "Árvores Binárias de Busca", disponível em: https://www.cin.ufpe.br/~dmrac/aula%20de%20arvore%20binaria%20de%20busca.pdf
+	ReferÃªncia bibliogrÃ¡fica:
+		[01]. "Ãrvore BinÃ¡ria com a Linguagem C", disponÃ­vel em: http://ninjacode.com.br/arvore-binaria-com-a-linguagem-c/
+		[02]. "Programar em C/Ãrvores binÃ¡rias de Busca", disponÃ­vel em: https://pt.wikibooks.org/wiki/Programar_em_C/%C3%81rvores_bin%C3%A1rias_de_Busca
+		[03]. "Ãrvores BinÃ¡rias de Busca", disponÃ­vel em: https://www.cin.ufpe.br/~dmrac/aula%20de%20arvore%20binaria%20de%20busca.pdf
 */
 
 // global vars.
@@ -89,7 +89,7 @@ void show_tree()
 			print_inOrder(root);
 			movexy(c, 42, "Post Order: ");
 			print_postOrder(root);
-				// elemento max. e min. da árvore
+				// elemento max. e min. da Ã¡rvore
 			movexy(146, 40, "Max: ");
 			print_max(root);
 			movexy(146, 42, "Min: ");
@@ -179,7 +179,7 @@ void show_tree()
 				tree_free(root);
 				show_tree();
 			break;
-				// backup da árvore >> exit(2)	
+				// backup da Ã¡rvore >> exit(2)	
 			case 'B':
 				system("title Binary Search Tree Viewer - Backup ");
 				textbackground(BLACK);
