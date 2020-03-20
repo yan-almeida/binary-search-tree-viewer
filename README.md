@@ -21,9 +21,9 @@
 
 > Há uma pasta dentro nomeada como 'files'. **Não a exclua!**
 
-- Arquivo gerado dentro do diretório 'files': *.txt
-
 <br>
+
+- Arquivo gerado dentro do diretório 'files': *.txt
 
 > Exemplo de backup < b >
 
