@@ -16,7 +16,7 @@
 
 ### Execução - *.exe
 
-'BSTV' requer [winRAR](https://www.win-rar.com/start.html?&L=0) para descompactá-lo - ou similar.
+'BSTV' requer [winRAR](https://www.win-rar.com/start.html?&L=0) (*ou similar*) para descompactá-lo.
 
 ![Screenshot_540](https://user-images.githubusercontent.com/56321281/77133936-b9284a80-6a43-11ea-91b4-e91c511b6ede.png)   
 [Download](https://github.com/keys8410/binary-search-tree-viewer/blob/master/Binary%20Search%20Tree%20Viewer.zip)
