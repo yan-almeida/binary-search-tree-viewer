@@ -189,7 +189,7 @@ void show_tree()
 					time_t segundos;
 					time(&segundos);   
 				  	DH = localtime(&segundos);
-				  	
+				  	 
 					if (arq != NULL)
 					{
 						textcolor(WHITE);
