@@ -1,11 +1,11 @@
 // structs
-	// elemento 
+// elemento 
 struct item
 {
 	int cod;
 };
 typedef struct item Item;
-	// arvore
+// arvore
 struct node
 {
 	Item item;
@@ -16,37 +16,37 @@ struct node
 typedef struct node Node;
 
 // prot. functions 
-Node* tree_initialize(); // inicia a arvore
+Node* tree_initialize();	// inicia a arvore
 Item created_item(int cod);	// cria um item
 
-Node* tree_inserts(Node* root, Item x);	// insere na arvore >> created_item
-void tree_prints(Node* root, int x, int y, int desloc);	// imprime arvore >> recursividade na impressão
-void tree_free(Node* root);	// libera o espaço alocado >> free
-Node* tree_min(Node* root);	// menor elemento >> função remover
-Node* tree_removes(Node* root, int cod); // remove item
-Node* tree_searchs(Node* root, int cod); // busca itme
+Node* tree_inserts(Node *root, Item x);	// insere na arvore >> created_item
+void tree_prints(Node *root, int x, int y, int desloc);	// imprime arvore >> recursividade na impressÃ£o
+void tree_free(Node *root);	// libera o espaÃ§o alocado >> free
+Node* tree_min(Node *root);	// menor elemento >> funÃ§Ã£o remover
+Node* tree_removes(Node *root, int cod);	// remove item
+Node* tree_searchs(Node *root, int cod);	// busca itme
 
-void print_preOrder(Node* root); // imprime arvore >> pré ordem
-void print_inOrder(Node* root); // imprime arvore >> em ordem
-void print_postOrder(Node* root); // imprime arvore >> pós ordem
+void print_preOrder(Node *root);	// imprime arvore >> prÃ© ordem
+void print_inOrder(Node *root);	// imprime arvore >> em ordem
+void print_postOrder(Node *root);	// imprime arvore >> pÃ³s ordem
 
-void print_min(Node* root); // imprime elemento >> minimo
-void print_max(Node* root); // imprime elemento >> maximo
+void print_min(Node *root);	// imprime elemento >> minimo
+void print_max(Node *root);	// imprime elemento >> maximo
 
-void fwrite_preOrder(Node *root); // backup de processos >> pré ordem
-void fwrite_inOrder(Node *root); // backup de processos >> em ordem
-void fwrite_postOrder(Node *root); // backup de processos >> pós ordem
+void fwrite_preOrder(Node *root);	// backup de processos >> prÃ© ordem
+void fwrite_inOrder(Node *root);	// backup de processos >> em ordem
+void fwrite_postOrder(Node *root);	// backup de processos >> pÃ³s ordem
 
 char txt[] = "files//fwrite.txt";
 FILE *arq = NULL;
 
 // functions
-	// inicia arvore
+// inicia arvore
 Node* tree_initialize()
 {
 	return NULL;
 }
-	// cria um item >> dado
+// cria um item >> dado
 Item created_item(int cod)
 {
 	Item item;
@@ -54,10 +54,10 @@ Item created_item(int cod)
 
 	return item;
 }
-	// cria um item aleatorio
+// cria um item aleatorio
 
-	// insere na arvore
-Node* tree_inserts(Node* root, Item x)
+// insere na arvore
+Node* tree_inserts(Node *root, Item x)
 {
 	if (root == NULL)
 	{
@@ -82,14 +82,14 @@ Node* tree_inserts(Node* root, Item x)
 
 	return root;
 }
-	// imprime arvore
+// imprime arvore
 void tree_prints(Node *root, int x, int y, int desloc)
 {
 	if (root != NULL)
 	{
 		gotoxy(x, y);
-		printf("[%d]", root->item.cod);	
-		
+		printf("[%d]", root->item.cod);
+
 		if (root->left != NULL)
 		{
 			tree_prints(root->left, x - desloc, y + 2, desloc / 2 + 1);
@@ -100,7 +100,7 @@ void tree_prints(Node *root, int x, int y, int desloc)
 		}
 	}
 }
-	// libera a memoria alocada
+// libera a memoria alocada
 void tree_free(Node *root)
 {
 	if (root != NULL)
@@ -110,24 +110,24 @@ void tree_free(Node *root)
 		free(root);
 	}
 }
-	// nó com o valor minimo
+// nÃ³ com o valor minimo
 Node* tree_min(Node *root)
 {
 	if (root != NULL)
 	{
 		Node *aux = root;
-		
+
 		while (aux->left != NULL)
 		{
 			aux = aux->left;
 		}
-		
+
 		return aux;
 	}
 
-	return NULL;	
+	return NULL;
 }
-	// remove da arvore
+// remove da arvore
 Node* tree_removes(Node *root, int cod)
 {
 	if (root != NULL)
@@ -153,14 +153,14 @@ Node* tree_removes(Node *root, int cod)
 				Node *aux = root->right;
 				free(root);
 
-				return aux;	// ponte entre o elemento removido e o ultimo elemento do nó da esquerda			
+				return aux;	// ponte entre o elemento removido e o ultimo elemento do nÃ³ da esquerda			
 			}
 			else if (root->left != NULL && root->right == NULL)
 			{
 				Node *aux = root->left;
 				free(root);
 
-				return aux;	// ponte entre o elemento removido e o ultimo elemento do nó da direita		 					
+				return aux;	// ponte entre o elemento removido e o ultimo elemento do nÃ³ da direita		 					
 			}
 			else
 			{
@@ -172,49 +172,49 @@ Node* tree_removes(Node *root, int cod)
 			}
 		}
 
-		return root; // retorna o elemento pra raiz >> no caso de remoção do dado da raiz
+		return root;	// retorna o elemento pra raiz >> no caso de remoÃ§Ã£o do dado da raiz
 	}
 
 	return NULL;
 }
-	// imprime arvore >> pré ordem
+// imprime arvore >> prÃ© ordem
 void print_preOrder(Node *root)
 {
 	if (root != NULL)
 	{
 		printf("%d ", root->item.cod);
-		print_preOrder(root->left);	
-		print_preOrder(root->right);	
+		print_preOrder(root->left);
+		print_preOrder(root->right);
 	}
 }
-	// imprime arvore >> em ordem
+// imprime arvore >> em ordem
 void print_inOrder(Node *root)
 {
 	if (root != NULL)
 	{
-		print_inOrder(root->left);	
+		print_inOrder(root->left);
 		printf("%d ", root->item.cod);
-		print_inOrder(root->right);	
+		print_inOrder(root->right);
 	}
 }
-	// imprime arvore >> pós ordem
+// imprime arvore >> pÃ³s ordem
 void print_postOrder(Node *root)
 {
 	if (root != NULL)
 	{
-		print_postOrder(root->left);	
+		print_postOrder(root->left);
 		print_postOrder(root->right);
-		printf("%d ", root->item.cod);			
+		printf("%d ", root->item.cod);
 	}
 }
-	// busca item
-Node* tree_searchs(Node* root, int cod)
+// busca item
+Node* tree_searchs(Node *root, int cod)
 {
 	if (root != NULL)
 	{
 		if (root->item.cod == cod)
 		{
-			return root;	
+			return root;
 		}
 		else
 		{
@@ -222,17 +222,17 @@ Node* tree_searchs(Node* root, int cod)
 			{
 				return tree_searchs(root->right, cod);
 			}
-			else 
+			else
 			{
 				return tree_searchs(root->left, cod);
 			}
-		}	
+		}
 	}
 
 	return NULL;
 }
-	// imprime elemento >> minimo
-void print_min(Node* root)
+// imprime elemento >> minimo
+void print_min(Node *root)
 {
 	if (root->left == NULL)
 	{
@@ -243,32 +243,31 @@ void print_min(Node* root)
 		print_min(root->left);
 	}
 }
-	// imprime elemento >> maximo
-void print_max(Node* root)
+// imprime elemento >> maximo
+void print_max(Node *root)
 {
 	if (root->right == NULL)
 	{
 		printf("%d", root->item.cod);
 	}
-	else 
+	else
 	{
-		print_max(root->right);	
+		print_max(root->right);
 	}
 }
-	// backup de processos >> pré ordem 	
+// backup de processos >> prÃ© ordem 	
 void fwrite_preOrder(Node *root)
-{  	
+{
 	if (root != NULL)
 	{
 		fprintf(arq, "[%d] ", root->item.cod);
-		
 		fwrite_preOrder(root->left);
 		fwrite_preOrder(root->right);
 	}
 }
-	// backup de processos >> em ordem	
+// backup de processos >> em ordem	
 void fwrite_inOrder(Node *root)
-{	  			
+{
 	if (root != NULL)
 	{
 		fwrite_inOrder(root->left);
@@ -276,7 +275,7 @@ void fwrite_inOrder(Node *root)
 		fwrite_inOrder(root->right);
 	}
 }
-	// backup de processos >> pós ordem 	
+// backup de processos >> pÃ³s ordem 	
 void fwrite_postOrder(Node *root)
 {
 	if (root != NULL)
@@ -286,4 +285,3 @@ void fwrite_postOrder(Node *root)
 		fprintf(arq, "[%d] ", root->item.cod);
 	}
 }
-
